@@ -7,17 +7,20 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Vasmoa a crear un array de numpy
-x = np.arange(1, 11)
-y = np.random.randint(1, 10, size=10)
 
-# Vamos a crear un dataframe de pandas
-df = pd.DataFrame({'x': x, 'y': y})
+if __name__ == '__main__':
+    # Vasmoa a crear un array de numpy
+    x = np.arange(1, 11)
+    y = np.random.randint(1, 10, size=10)
 
-# Vamos a crear un gráfico de dispersión con seaborn
-sns.scatterplot(data=df, x='x', y='y')
-plt.title('Gráfico de dispersión')
-plt.xlabel('Eje x')
-plt.ylabel('Eje y')
-plt.title('Gráfico de dispersión con seaborn')
-plt.show()
+    # Vamos a crear un dataframe de pandas
+    df = pd.DataFrame({'x': x, 'y': y})
+
+    # Vamos a crear un gráfico de dispersión con seaborn
+    sns.scatterplot(data=df, x='x', y='y')
+    plt.title('Gráfico de dispersión')
+    plt.xlabel('Eje x')
+    plt.ylabel('Eje y')
+    plt.title('Gráfico de dispersión con seaborn')
+    plt.savefig('/usr/app/src/images/scatterplot.png')  # Guarda la figura en un archivo
+    plt.close()  # Cierra la figura para liberar memoria
